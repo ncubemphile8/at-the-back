@@ -1,0 +1,6 @@
+document.getElementById('year').textContent = new Date().getFullYear();
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+toggle?.addEventListener('click', () => { const open = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation'); toggle.textContent = open ? '×' : '☰'; });
+nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); toggle?.setAttribute('aria-expanded','false'); if(toggle){toggle.textContent='☰';toggle.setAttribute('aria-label','Open navigation');} }));
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) { const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);} }), {threshold:.12}); document.querySelectorAll('.intro,.fire-section,.menu-card,.combos,.story-copy,.visit-copy').forEach(el=>{el.classList.add('reveal');observer.observe(el);}); }
