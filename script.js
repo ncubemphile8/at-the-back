@@ -14,6 +14,11 @@ nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => 
 }));
 const whatsappOrder = document.querySelector('.hero-actions .btn-outline');
 if (whatsappOrder) whatsappOrder.href = 'https://wa.me/263779372899?text=Hi%20At%20the%20Back%21%20I%27d%20like%20to%20place%20an%20order.';
+const secondaryPhone = document.querySelector('.contact-links a[href^="tel:+26373664888"]');
+if (secondaryPhone) {
+  secondaryPhone.href = 'tel:073664888';
+  secondaryPhone.innerHTML = 'Call 073 664 888 <span>↗</span>';
+}
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const heroVideo = document.querySelector('.hero-video');
 if (heroVideo && !reducedMotion) {
