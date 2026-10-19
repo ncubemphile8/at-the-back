@@ -12,6 +12,8 @@ nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => 
   toggle?.setAttribute('aria-expanded', 'false');
   if (toggle) { toggle.textContent = '☰'; toggle.setAttribute('aria-label', 'Open navigation'); }
 }));
+const whatsappOrder = document.querySelector('.hero-actions .btn-outline');
+if (whatsappOrder) whatsappOrder.href = 'https://wa.me/263779372899?text=Hi%20At%20the%20Back%21%20I%27d%20like%20to%20place%20an%20order.';
 const heroVideo = document.querySelector('.hero-video');
 if (heroVideo && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const clips = [
