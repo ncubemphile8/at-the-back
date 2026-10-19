@@ -18,8 +18,8 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 const heroVideo = document.querySelector('.hero-video');
 if (heroVideo && !reducedMotion) {
   const clips = [
-    'https://videos.pexels.com/video-files/3134563/3134563-hd_1920_1080_30fps.mp4',
-    'https://videos.pexels.com/video-files/856399/856399-hd_1920_1080_30fps.mp4'
+    'https://videos.pexels.com/video-files/5032152/5032152-hd_1920_1080_25fps.mp4',
+    'https://videos.pexels.com/video-files/32546598/13879991_1920_1080_24fps.mp4'
   ];
   let activeClip = 0;
   const loadClip = () => {
